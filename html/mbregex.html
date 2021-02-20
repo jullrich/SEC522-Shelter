@@ -1,0 +1,48 @@
+<?php
+require('db.php');
+include('header.html');
+$name='';
+$debug='';
+if ( array_key_exists('name',$_GET) ) {
+    $name=$_GET['name'];
+}
+if ( array_key_exists('debug',$_GET) ) {
+    $debug=$_GET['debug'];
+}
+?>
+<link rel="stylesheet" href="/css2/shelter.css" type="text/css" media="screen, projection, print" />
+
+<script src="/js/jquery.js"></script>
+<link rel="stylesheet" href="/css2/ex.css" type="text/css" />
+<blockquote>
+<h1>SEC522 Animal Shelter</h1>
+<h2>Where Good Dogs and Bad Cats Find Homes</h2>
+<p>
+  The animal shelter decides to expand internationally, to support this initiative, the site will need to support international names.
+  Enter a regular expression below that matches names. The table below lists strings that should or should not match
+</p>
+<p>
+  <table>
+    <thead><tr><th>Should Match</th><th>Should Not Match</th></tr></thead>
+    <tbody>
+      <tr><td>
+	  Fluffy<br/>
+	  Hogard<br/>
+	  Ghost<br/>
+	  Gluon<br/>
+	  君<br/>
+	  包<br/>
+	  咪咪<br/>
+	</td><td>
+	  not'a'name
+	  names with spaces
+	  !.;=
+	  @abc
+	  &lt;&gt;
+      </td></tr>
+      
+  </p>
+
+</blockquote>
+
+</body></html>
